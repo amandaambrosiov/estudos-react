@@ -7,12 +7,37 @@ import { useEffect } from "react";
 
 function App() {
   const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) || [] 
+    JSON.parse(localStorage.getItem("tasks")) || []
   );
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
+
+
+// CODIGO PARA CHAMAR UMA API 
+
+  // useEffect(() => {
+
+  //   const fetchTasks = async () => {
+  //     // CHAMAR A API
+  //     const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=10', {
+  //       method: 'GET'
+  //     });
+
+  //     // PEGAR OS DADOS QUE ELA RETORNA 
+
+  //     const data = await response.json()
+
+  //     // ARMAZENAR/PERSISTIR ESSES DADOS NO STATE 
+
+  //     setTasks(data);
+
+  //   };
+  //   fetchTasks();
+
+  // }, [])
+
 
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
