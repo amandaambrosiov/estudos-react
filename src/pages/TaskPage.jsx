@@ -15,7 +15,7 @@ const navigate = useNavigate()
       <div className="w-[500px] mx-auto space-y-4">
         
         <div className="flex justify-center relative mb-6">
-          <button onClick={() => navigate(-1)} className="absolute left-0 top-0 bottom-0 text-slate-100">
+          <button onClick={() => navigate(-1)} className="absolute left-0 top-0 bottom-0 text-slate-50">
             <ChevronLeftIcon />
           </button>
         <Title>
